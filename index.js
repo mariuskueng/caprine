@@ -46,7 +46,9 @@ function createMainWindow() {
 		}
 	});
 
-	win.loadUrl('https://www.messenger.com/login/');
+	win.loadUrl('https://web.whatsapp.com', {
+		'userAgent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'
+	});
 	win.on('closed', app.quit);
 	win.on('page-title-updated', (e, title) => updateBadge(title));
 
