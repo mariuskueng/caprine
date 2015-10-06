@@ -35,7 +35,7 @@ function createMainWindow() {
 		'icon': path.join(__dirname, 'media', 'Icon.png'),
 		'min-width': 400,
 		'min-height': 200,
-		'title-bar-style': 'hidden-inset',
+		// 'title-bar-style': 'hidden-inset',
 		'web-preferences': {
 			// fails without this because of CommonJS script detection
 			'node-integration': false,
