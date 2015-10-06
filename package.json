@@ -1,25 +1,23 @@
 {
-  "name": "caprine",
-  "productName": "Caprine",
-  "version": "0.1.2",
-  "description": "Unofficial Facebook Messenger app",
+  "name": "parrot",
+  "productName": "Parrot",
+  "version": "0.1.0",
+  "description": "Unofficial WhatsApp app",
   "license": "MIT",
-  "repository": "sindresorhus/caprine",
+  "repository": "mariuskueng/parrot",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "name": "Marius Küng"
   },
   "engines": {
     "node": ">=4"
   },
-  "electronVersion": "0.33.3",
+  "electronVersion": "0.33.4",
   "scripts": {
     "test": "xo",
     "start": "electron .",
     "build": "npm run build-osx && npm run build-linux",
-    "build-osx": "electron-packager . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --ignore='^/media$' --prune --platform=darwin --arch=x64 --icon=media/Icon.icns --app-bundle-id=com.sindresorhus.caprine --sign='Developer ID Application: Sindre Sorhus (YG56YK5RN5)' --app-version=$npm_package_version --version=$npm_package_electronVersion && cd dist/Caprine-darwin-x64 && zip -ryXq9 ../Caprine-${npm_package_version}.zip Caprine.app",
-    "build-linux": "electron-packager . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --ignore='^/media/(?!Icon.png$).*' --prune --platform=linux --arch=x64 --app-bundle-id=com.sindresorhus.caprine --app-version=$npm_package_version --version=$npm_package_electronVersion && cd dist/Caprine-linux-x64/ && zip -ryq9 ../Caprine-linux-\"$npm_package_version\".zip *"
+    "build-osx": "electron-packager . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --ignore='^/media$' --prune --platform=darwin --arch=x64 --icon=media/Icon.icns --app-bundle-id=com.mariuskueng.Parrot --app-version=$npm_package_version --version=$npm_package_electronVersion && cd dist/Parrot-darwin-x64 && zip -ryXq9 ../Parrot-${npm_package_version}.zip Parrot.app",
+    "build-linux": "electron-packager . $npm_package_productName --overwrite --out=dist --ignore='^/dist$' --ignore='^/media/(?!Icon.png$).*' --prune --platform=linux --arch=x64 --app-bundle-id=com.mariuskueng.Parrot --app-version=$npm_package_version --version=$npm_package_electronVersion && cd dist/Parrot-linux-x64/ && zip -ryq9 ../Parrot-linux-\"$npm_package_version\".zip *"
   },
   "files": [
     "index.js",
@@ -30,19 +28,19 @@
   ],
   "keywords": [
     "electron-app",
-    "facebook",
+    "whatsapp",
     "messenger",
     "chat",
     "instant",
     "messaging",
-    "caprine"
+    "Parrot"
   ],
   "dependencies": {
     "electron-debug": "^0.2.1"
   },
   "devDependencies": {
     "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.33.3",
+    "electron-prebuilt": "^0.33.4",
     "xo": "*"
   },
   "xo": {

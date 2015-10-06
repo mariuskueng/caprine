@@ -35,7 +35,7 @@ function createMainWindow() {
 		'icon': path.join(__dirname, 'media', 'Icon.png'),
 		'min-width': 400,
 		'min-height': 200,
-		'title-bar-style': 'hidden-inset',
+		// 'title-bar-style': 'hidden-inset',
 		'web-preferences': {
 			// fails without this because of CommonJS script detection
 			'node-integration': false,
@@ -46,7 +46,9 @@ function createMainWindow() {
 		}
 	});
 
-	win.loadUrl('https://www.messenger.com/login/');
+	win.loadUrl('https://web.whatsapp.com', {
+		'userAgent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'
+	});
 	win.on('closed', app.quit);
 	win.on('page-title-updated', (e, title) => updateBadge(title));
 
